@@ -199,12 +199,13 @@ var user = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   //Code Here
-
+user.name = 'Tyler S. McGinnis';
+user.email = tyler.mcginnis@devmounta.in;
 
 //Now call the sayName method that's on the user object which will alert the users email
 
   //Code Here
-
+sayName();
 
 
 
@@ -216,17 +217,25 @@ var user = {
 //Create an empty object called methodCollection.
 
   //Code Here
+var methodCollection = {};
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
   //Code Here
+methodCollection.alertHello() {
+  alert('hello');
+};
+methodCollection.logHello() {
+  console.log('hello');
+};
 
 //Now call your alertHello and logHello methods.
 
   //Code Here
-
+alertHello();
+logHello();
 
 
 
@@ -266,12 +275,18 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees.length);
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absense to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
-
+for (var key in devMountainEmployees) {
+  if (devMountainEmployees[key] === cahlan) {
+    delete devMountainEmployees[key];
+  }
+}
 
 
 
@@ -313,6 +328,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
+var users = [];
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -326,6 +342,21 @@ var user1 = {
 }
 
 //Your Code Here
+var user2 = {
+  name: 'Kevin Hardy',
+  email: 'hardy95k@yahoo.com',
+  password: 'javascript123',
+  username: 'hardy95k'
+}
+
+var user3 = {
+  name: 'Kelly Hardy',
+  email: 'hotwriter99@ahoo.com',
+  password: 'mermaidsrock!',
+  username: 'hotwriter'
+}
+
+users.push(user1, user2, user3);
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -336,6 +367,11 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular indice he's located in, delete him from the array.*/
 
   //Code Here
+for (var key in users) {
+  if (users[key] === 'tylermcginnis33@gmail.com') {
+    delete users[key];
+  }
+}
 
 //The activity we just did is very much how data works in 'the real world'.
 
